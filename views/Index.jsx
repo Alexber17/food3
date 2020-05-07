@@ -11,7 +11,7 @@ class Index extends React.Component {
 
             <div className="row">
             <div className="col-md-8">
-                <h1>Index Page</h1>
+                <h1>Recipes</h1>
                 <ul>
                     {
                         recipes.map((recipe, i)=>{
