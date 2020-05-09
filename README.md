@@ -5,7 +5,7 @@ Project status: Prototype
 
 
 ## Technologies used:
-Node.js
+Node.js <br />
 Express.js 
 MongoDB 
 Mongoose
