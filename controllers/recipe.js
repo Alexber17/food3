@@ -8,20 +8,7 @@ const Recipe = require('../models/Recipes.js');
 // add routes
 
 
-// search
-router.post('/search/', (req, res) => {
-    // Find the specific document
-    Recipe.find({"name" : {$regex : `.*${req.body.name}.*`}}, (error, foundRecipe) => {
-        // render the Show route and pass it the foundFruit
-        console.log()
-        console.log(foundRecipe)
-        res.render('Search', {
-            recipes: foundRecipe,
-            element: req.body.name
 
-        });
-    });
-});
 
 // Index
 router.get('/', (req, res) => {
@@ -74,6 +61,21 @@ router.delete('/:id', (req, res) => {
     // Delete document from collection
     Recipe.findByIdAndRemove(req.params.id, (err, recipe) => {
         res.redirect('/FBlog');
+    });
+});
+
+// search
+router.post('/search/', (req, res) => {
+    // Find the specific document
+    Recipe.find({"name" : {$regex : `.*${req.body.name}.*`}}, (error, foundRecipe) => {
+        // render the Show route and pass it the foundFruit
+        console.log()
+        console.log(foundRecipe)
+        res.render('Search', {
+            recipes: foundRecipe,
+            element: req.body.name
+
+        });
     });
 });
 
