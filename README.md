@@ -6,11 +6,11 @@ Project status: Prototype
 
 ## Technologies used:
 Node.js <br />
-Express.js 
-MongoDB 
-Mongoose
-Boostrap 4
-Moment.js
+Express.js <br />
+MongoDB <br />
+Mongoose <br />
+Boostrap 4 <br />
+Moment.js <br />
 
 
 ## Wireframe
