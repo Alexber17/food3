@@ -4,7 +4,7 @@ class New extends React.Component {
     render() {
       return (
         <Default>
-           <form action="/FBlog" method="POST">
+           <form action="/fblog" method="POST">
 
 
           <div class='container'>

@@ -5,7 +5,7 @@ class Edit extends React.Component {
         const { recipe } = this.props;
         return (
             <Default>
-            <form action={`/FBlog/${recipe._id}?_method=PUT`} method="POST">
+            <form action={`/fblog/${recipe._id}?_method=PUT`} method="POST">
  
            <div class='container'>
                <h1>Edit Recipe</h1>

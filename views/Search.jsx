@@ -24,7 +24,7 @@ class Search extends React.Component {
                                     <div className="card-body">
                                         <h2 className="card-title">{recipe.name}</h2>
                                         <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                                        <a href={`/FBlog/${recipe._id}`} className="btn btn-primary">Read More &rarr;</a>
+                                        <a href={`/fblog/${recipe._id}`} className="btn btn-primary">Read More &rarr;</a>
                                     </div>
                                     <div className="card-footer text-muted">
                                         Posted on {moment(recipe.createdAt).format('MMMM Do YYYY, h:mm a')}
@@ -44,7 +44,7 @@ class Search extends React.Component {
                 <div className="card my-4">
                     <h5 className="card-header">Search</h5>
                     <div className="card-body">
-                        <form action={`/FBlog/search/?name`} method="POST">
+                        <form action={`/fblog/search/?name`} method="POST">
                         <div className="input-group">
                             
                          <input type="text" className="form-control" name='name' placeholder="Search for..."/>

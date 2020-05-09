@@ -55,7 +55,7 @@ class Show extends React.Component {
                             <div className="col-lg-6">
                                 <ul className="list-unstyled mb-0">
                                         <li>
-                                            <a className="btn btn-link" href={`/FBlog/${recipe._id}/edit`}>Edit</a>
+                                            <a className="btn btn-link" href={`/fblog/${recipe._id}/edit`}>Edit</a>
                                         </li>
                                     <li>
                                     <a className="btn btn-link" href='' data-toggle="modal" data-target="#myModal">Delete</a>
@@ -68,7 +68,7 @@ class Show extends React.Component {
                                                 <button type="button" className="close" data-dismiss="modal">&times;</button>
                                             </div>
                                             <div className="modal-footer">
-                                            <form action={`/FBlog/${recipe._id}?_method=DELETE`} method="POST">
+                                            <form action={`/fblog/${recipe._id}?_method=DELETE`} method="POST">
                                                 <input  type="submit" value="Yes" className="btn btn-link" ></input  >
                                             </form>
                                                 <button type="button" className="btn btn-danger" data-dismiss="modal">No</button>

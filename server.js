@@ -40,7 +40,7 @@ app.use(express.static(__dirname + '/public'));
 //controllers
 
 const recipeController = require('./controllers/recipe.js')
-app.use('/FBlog',recipeController);
+app.use('/fblog',recipeController);
 
 // listen
 app.listen(PORT, () => {
