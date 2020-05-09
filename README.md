@@ -1,5 +1,5 @@
 # FoodBlog
-This website is blog for online, this alloy you to add, modify and delete recipes its equipped with search options for an easy accept to your recipes.
+This website is an online food blog, it allows you to add, edit, and delete recipes. It is equipped with a search option for easy accept to your recipes.
 
 Project status: Prototype
 
