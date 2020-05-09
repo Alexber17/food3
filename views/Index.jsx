@@ -7,6 +7,42 @@ class Index extends React.Component {
         const { recipes } = this.props;
         return (
             <Default>
+
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&h=500"   alt="First slide"/>
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1565299715199-866c917206bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&h=500"  alt="Second slide"/>
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&h=500"  alt="Third slide"/>
+                        </div>
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1542895364-1f38d277f031?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&h=500"  alt="Third slide"/>
+                        </div>
+
+                       
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+
+
+
+
           <div className="container">
 
             <div className="row">
@@ -39,17 +75,18 @@ class Index extends React.Component {
                 </ul>
                 </div>
                 <div className="col-md-4">
-
-                
                 <div className="card my-4">
                     <h5 className="card-header">Search</h5>
                     <div className="card-body">
+                        <form action="#">
                         <div className="input-group">
+                            
                          <input type="text" className="form-control" placeholder="Search for..."/>
                           <span className="input-group-btn">
-                             <button className="btn btn-secondary" type="button">Go!</button>
+                             <button className="btn btn-secondary" type="submit button">Go!</button>
                         </span>
                     </div>
+                    </form>
                 </div>
                 </div>
               </div>
