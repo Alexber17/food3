@@ -78,12 +78,12 @@ class Index extends React.Component {
                 <div className="card my-4">
                     <h5 className="card-header">Search</h5>
                     <div className="card-body">
-                        <form action="#">
+                        <form action={`/FBlog/search/?name`} method="POST">
                         <div className="input-group">
                             
-                         <input type="text" className="form-control" placeholder="Search for..."/>
+                         <input required type="text" className="form-control" name='name' placeholder="Search for..."/>
                           <span className="input-group-btn">
-                             <button className="btn btn-secondary" type="submit button">Go!</button>
+                             <button  className="btn btn-secondary" type="submit button">Go!</button>
                         </span>
                     </div>
                     </form>

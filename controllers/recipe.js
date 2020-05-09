@@ -6,18 +6,37 @@ const Recipe = require('../models/Recipes.js');
 
 
 // add routes
+
+
+// search
+router.post('/search/', (req, res) => {
+    // Find the specific document
+    Recipe.find({"name" : {$regex : `.*${req.body.name}.*`}}, (error, foundRecipe) => {
+        // render the Show route and pass it the foundFruit
+        console.log()
+        console.log(foundRecipe)
+        res.render('Search', {
+            recipes: foundRecipe,
+            element: req.body.name
+
+        });
+    });
+});
+
 // Index
 router.get('/', (req, res) => {
     // Use Fruits model to get all Fruits
 
 
     Recipe.find({}, (error, allRecipes) => {
-        res.render('Index', {
+        res.render('', {
             recipes: allRecipes
         })
     });
 
 });
+
+
 // New
 router.get('/new', (req, res) => {
     res.render('New');
@@ -34,6 +53,9 @@ router.post('/', (req, res) => {
     });
 });
 
+
+
+
 // Show
 router.get('/:id', (req, res) => {
     // Find the specific document
@@ -44,6 +66,7 @@ router.get('/:id', (req, res) => {
         });
     });
 });
+
 
 
 // Delete
