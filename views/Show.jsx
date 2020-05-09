@@ -21,7 +21,7 @@ class Show extends React.Component {
                             <h1 className="mt-4">{recipe.name}</h1>
                             <p className="lead">
                             by
-                            <a href="www.linkedin.com/in/alexander-bermudez"> Alexander Bermudez</a>
+                            <a href="https://www.linkedin.com/in/alexander-bermudez/"> Alexander Bermudez</a>
                             </p>
                             <hr/>
                             <p>Posted on {moment(recipe.createdAt).format('MMMM Do YYYY, h:mm a')}</p>
