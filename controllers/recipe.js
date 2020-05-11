@@ -62,8 +62,8 @@ router.delete('/:id', (req, res) => {
 // search
 router.post('/search/', (req, res) => {
     // Find the specific document
-    const data = req.body.name.toLowerCase()
-    Recipe.find({$or:[{"name" : {$regex : `.*${data}.*`}},{"name" : {$regex : `.*${req.body.name}.*`}}]}, (error, foundRecipe) => {
+    const data = req.body.name
+    Recipe.find({"name" : {$regex : `.*${data}.*`, $options: 'si' }}, (error, foundRecipe) => {
         // render the Show route and pass it the foundRecipe
         console.log
         console.log(data)
