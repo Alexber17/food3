@@ -5,8 +5,8 @@ const React = require('react');
 class Default extends React.Component{
     render(){
         return(
-                <html>
-                    <head>
+         <html>
+                <head>
                     {/* <!-- Required meta tags --> */}
                     <meta charset="utf-8"/>
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
@@ -19,11 +19,11 @@ class Default extends React.Component{
                     <link rel="stylesheet" type="text/css" href="/css/blog-home.css"/>
                         
                         <title>Blog</title>
-                    </head>
 
-                    <body>
+                </head>
 
-                    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+             <body>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container">
                         <a className="navbar-brand" href="/fblog"> <h3>Food Blog</h3></a>
                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,16 +42,11 @@ class Default extends React.Component{
                          
                           </ul>
                         </div>
-                        </div>
-                     </nav>
-
-                   
-
-
-                            {this.props.children}                                
-             
-                    </body>
-                </html>
+                     </div>
+                 </nav>
+                    {this.props.children}                                
+            </body>
+        </html>
         )
     }
 }

@@ -5,16 +5,11 @@ const Recipe = require('../models/Recipes.js');
 
 
 
-// add routes
-
-
 
 
 // Index
 router.get('/', (req, res) => {
-    // Use Fruits model to get all Fruits
-
-
+    // Use Recipe model to get all Recipes
     Recipe.find({}, (error, allRecipes) => {
         res.render('Index', {
             recipes: allRecipes
@@ -31,7 +26,7 @@ router.get('/new', (req, res) => {
 
 // Create
 router.post('/', (req, res) => {
-
+    
     // Use Model to create Fruit Document
     Recipe.create(req.body, (error, addRecipe) => {
         console.log(addRecipe)
@@ -47,7 +42,7 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res) => {
     // Find the specific document
     Recipe.findById(req.params.id, (error, foundRecipe) => {
-        // render the Show route and pass it the foundFruit
+        // render the Show route and pass it the foundRecipe
         res.render('Show', {
             recipe: foundRecipe
         });
@@ -67,8 +62,9 @@ router.delete('/:id', (req, res) => {
 // search
 router.post('/search/', (req, res) => {
     // Find the specific document
+    
     Recipe.find({"name" : {$regex : `.*${req.body.name}.*`}}, (error, foundRecipe) => {
-        // render the Show route and pass it the foundFruit
+        // render the Show route and pass it the foundRecipe
         console.log()
         console.log(foundRecipe)
         res.render('Search', {
